@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Görev Listesi Uygulaması</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/68a5838d68.js"></script>
+    <script
+      src="https://kit.fontawesome.com/4f5df7e990.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="zaman"></div>
+    <div id="container" >
+      <h1>
+        Görev Listesi
+      </h1>
+          <tr>
+      <input type="text" placeholder="Notunuzu Giriniz" />
+      <ul>
+        <li>
+          <span><i class="fa far fa-window-close" aria-hidden="true"></i></span
+          >merhaba
+        </li>
+        <li>
+          <span><i class="fa far fa-window-close" aria-hidden="true"></i></span
+          >
+        </li>
+        </ul>
+    </div>
+    
+<script>
+function tarihSaat() {
+    var date = new Date().toLocaleString('tr-TR');
+    document.getElementById("zaman").innerHTML = date;
+}
+// her 1 saniyede tarihSaat fonksiyonunu yeniden çalıştır
+setInterval(tarihSaat, 1000); 
+</script> 
+
+    <script src="index.js"></script>
+  </body>
+</html>

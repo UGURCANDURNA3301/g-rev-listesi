@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300italic,regular,italic,700,700italic,900,900italic);
+
+body {
+    font-family: 'Gabarito', sans-serif;
+    background: #3ec0af;
+    background: -webkit-linear-gradient(to right, #6fbad1, #0d5b9b);
+    background: linear-gradient(to right, #62ebab, #c72aa5);
+}
+.tamamlanmis {
+    color: gray;
+    text-decoration: line-through;
+}
+
+#zaman{
+
+    margin: 10px auto;
+    width: 100px ;
+    object-position: 0%;
+
+}
+
+#container {
+    position: relative;
+    margin: 80px auto;
+    width: 800px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#container::before{
+
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    margin: 80px auto;
+    width: 800px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, #62ebab,#62ebab);
+    animation: animate 6s linear infinite;
+}
+#container::after{
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    margin: 80px auto;
+    width: 800px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, #62ebab,#62ebab);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+    
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+h1 {
+    background-color: #80CBC4;
+    text-align: center;
+    font-size: 50px;
+    color: whitesmoke;
+    padding: 20px;
+    margin: 0;
+    letter-spacing: 4px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    background-color: white;
+    height: 50px;
+    line-height: 50px;
+}
+li:nth-child(2n) {
+    background-color: white;
+}
+li span {
+    height: 50px;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+li:hover span {
+    opacity: 1;
+    width: 40px;
+    color: white;
+    cursor: pointer;
+}
+input {
+    width: 97%;
+    height: 30px;
+    padding: 10px 10px 10px;
+    color: rgba(0, 0, 0);
+    font-size: 24px;
+    font-weight: 500;
+}
